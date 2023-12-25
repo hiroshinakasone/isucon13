@@ -5,6 +5,12 @@ packer {
       source  = "github.com/hashicorp/ansible"
     }
   }
+  required_plugins {
+    amazon = {
+      version = ">= 1.2.9"
+      source = "github.com/hashicorp/amazon"
+    }
+  }
 }
 
 variable "commit_hash" {
@@ -64,7 +70,7 @@ source "amazon-ebs" "isucon13" {
   temporary_key_pair_type = "ed25519"
 
   launch_block_device_mappings {
-    volume_size = 8
+    volume_size = 40
     device_name = "/dev/sda1"
   }
 }

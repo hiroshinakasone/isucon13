@@ -51,7 +51,7 @@ ISUCON13で使用したTLS証明書は `provisioning/ansible/roles/nginx/files/e
 
 ### 自分でAMIをビルドする場合
 
-上記AMIが利用できなくなった場合は、 `provisioning/packer` 以下で `make build` を実行するとAMIをビルドできます。packer が必要です。(運営時に検証したバージョンはv1.9.4)
+上記AMIが利用できなくなった場合は、 `provisioning/packer` 以下で `AWS_PROFILE=<profile_name> make all` を実行するとAMIをビルドできます。packer が必要です。(運営時に検証したバージョンはv1.9.4)
 
 Ansibleで環境構築を行います。すべての初期実装の言語環境をビルドするため、時間がかかります。下記のAnsibleの項目も確認してください。
 
